@@ -74,7 +74,7 @@ const useCards = () => {
                 const normalizedCard = normalizeCard(cardFromClient);
                 const card = await createCard(normalizedCard);
                 requestStatus(false, null, null, card);
-                snack("A new ads has been created", "success")
+                snack("A new business card has been created", "success")
                 navigate(ROUTES.MY_CARDS);
             } catch (error) {
                 requestStatus(false, error, null);
@@ -97,7 +97,7 @@ const useCards = () => {
         try {
             setPending(true);
             await deleteCard(cardId);
-            snack("ads deleted successfully", "success");
+            snack("Card deleted successfully", "success");
         } catch (error) {
             requestStatus(false, error, null);
         }
@@ -108,7 +108,7 @@ const useCards = () => {
             setPending(true);
             const card = await updateCard(cardId, normalizeCardFrom);
             requestStatus(false, null, null, card);
-            snack("ads updated successfully", "success");
+            snack("Card updated successfully", "success");
             navigate(ROUTES.MY_CARDS);
         } catch {
             requestStatus(false, error, null);

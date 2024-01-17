@@ -2,9 +2,10 @@ const mapCardToModel = (card) => {
   return {
       title: card.title,
       description: card.description,
-      price: card.price,
+      subtitle: card.subtitle,
       phone: card.phone,
       email: card.email,
+      webUrl: card.web,
       imageUrl: card.image.url,
       imageAlt: card.image.alt,
       state: card.address.state,

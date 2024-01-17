@@ -22,7 +22,6 @@ const cardSchema = new mongoose.Schema({
     trim: true,
     unique: true,
   },
-  web: URL,
   image: Image,
   address: Address,
   bizNumber: {

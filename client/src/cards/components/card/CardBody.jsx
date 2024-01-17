@@ -1,6 +1,3 @@
-
-
-import React from "react";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
@@ -9,17 +6,12 @@ import Box from "@mui/material/Box";
 import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
-
-  const { title, phone, price, address, bizNumber } = card;
-
-  if (!address){
-    return null;
-  }
+  const { title, subtitle, phone, address, bizNumber } = card;
   const { street, houseNumber, city } = address;
 
   return (
     <CardContent>
-      <CardHeader title={title} sx={{ p: 0, mb: 1 }} />
+      <CardHeader title={title} subheader={subtitle} sx={{ p: 0, mb: 1 }} />
       <Divider />
       <Box mt={1}>
         <Typography variant="body2" color="text.secondary">
@@ -27,12 +19,6 @@ const CardBody = ({ card }) => {
             Phone:{" "}
           </Typography>
           {phone}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong">
-            Price:{" "}
-          </Typography>
-          {price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           <strong>Address: </strong>

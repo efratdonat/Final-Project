@@ -7,6 +7,7 @@ const urlRegex =
 const cardSchema = {
     title: Joi.string().min(2).max(256).required(),
     description: Joi.string().min(2).max(1024).required(),
+    subtitle: Joi.string().min(2).max(256).required(),
     imageAlt: Joi.string().min(2).max(256).allow(""),
     state: Joi.string().allow(""),
     country: Joi.string().min(2).max(256).required(),
@@ -22,6 +23,10 @@ const cardSchema = {
         .ruleset.pattern(/^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/)
         .rule({ message: 'card "mail" mast be a valid mail' })
         .required(),
+    webUrl: Joi.string()
+        .ruleset.regex(urlRegex)
+        .rule({ message: 'card "web" mast be a valid url' })
+        .allow(""),
     imageUrl: Joi.string()
         .ruleset.regex(urlRegex)
         .rule({ message: 'card.image "url" mast be a valid url' })

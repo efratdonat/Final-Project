@@ -2,9 +2,10 @@ const normalizeCard = card => {
     return {
         title: card.title,
         description: card.description,
-        price: card.price,
+        subtitle: card.subtitle,
         phone: card.phone,
         email: card.email,
+        web: card.webUrl,
         image: {
             url: card.imageUrl,
             alt: card.imageAlt,

@@ -10,7 +10,7 @@ const CardsFeedback = ({ isPending, error, cards, onDelete ,onLike }) => {
     if (cards && !cards.length) {
         return (
             <p>
-                OOpsi... there are no ads in the database that match the parameters you entered
+                OOpsi... there are no cards in the database that match the parameters you entered
             </p>
         )
     }

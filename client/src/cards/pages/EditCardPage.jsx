@@ -46,10 +46,11 @@ const EditCardPage = () => {
     const inputFactory = (name, label, required, type) => ({ name, label, required, type })
     const mapInputs = [
         inputFactory("title", "title", true, "text"),
+        inputFactory("subtitle", "subtitle", true, "text"),
         inputFactory("description", "description", true, "text"),
-        inputFactory("price", "price", true, "number"),
         inputFactory("phone", "phone", true, "phone"),
         inputFactory("email", "email", true, "email"),
+        inputFactory("webUrl", "web", false, "text"),
         inputFactory("imageUrl", "image url", false, "text"),
         inputFactory("imageAlt", "image alt", false, "text"),
         inputFactory("state", "state", false, "text"),
@@ -68,7 +69,7 @@ const EditCardPage = () => {
                 alignItems: "center",
             }}>
             <CardForm
-                title="Edit Ads"
+                title="Edit Card"
                 onSubmit={rest.onSubmit}
                 onReset={rest.handleReset}
                 errors={value.errors}

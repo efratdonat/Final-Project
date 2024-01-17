@@ -1,52 +1,135 @@
+import { Container, Typography, Box, Paper } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import React from "react";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import CardHeader from "@mui/material/CardHeader";
-import Box from "@mui/material/Box";
-import cardType from "../../cards/models/types/cardType";
+import PageHeader from "../../components/PageHeader";
+import useCards from "../hooks/useCards";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const CardBody = ({ card }) => {
-  const { title, description, price, phone, address, bizNumber } = card;
-  const { street, houseNumber, city } = address;
+const CardDetailPage = () => {
+  const { id } = useParams();
+  const {
+    value: { card },
+    handleGetCard,
+  } = useCards();
+
+  useEffect(() => {
+    handleGetCard(id);
+  }, []);
 
   return (
-    <CardContent>
-      <CardHeader title={title}  sx={{ p: 0, mb: 1 }} />
-      <Divider />
-      <Box mt={1}>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong">
-            Description:{" "}
+    <Container maxWidth="lg">
+      <PageHeader
+        title="Business Details"
+        subtitle="Here you can find more details about the business"
+      />
+      {card && (
+        <Box mt={4}>
+          <Typography variant="h4" color="primary" align="center" mb={2}>
+            {card.title}
           </Typography>
-          {description}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong">
-            Price:{" "}
+          <Typography variant="h6" align="center" mb={4}>
+            {card.subtitle}
           </Typography>
-          {price} 
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong">
-            Phone:{" "}
-          </Typography>
-          {phone}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <strong>Address: </strong>
-          {street} {houseNumber} {city}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <strong>Card Number: </strong> {bizNumber}
+
+          <Paper
+            elevation={3}
+            sx={{
+              width: 400,
+              margin: "0 auto",
+              backgroundColor: "#f2f2f2",
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+          >
+            {card.image && (
+              <div
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src={card.image.url}
+                  alt={card.image.alt}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    width: "100%",
+                    height: "100%",
+                    border: "2px solid #FF4081",
+                    boxSizing: "border-box",
+                  }}
+                ></div>
+              </div>
+            )}
+          </Paper>
+
+          <Box mt={4} textAlign="center">
+            <Typography variant="h6" component="div">
+              <span style={{ marginRight: "8px" }}>Visit our website:</span>
+              <a
+                href={card.web}
+                style={{
+                  color: "#FF4081",
+                  textDecoration: "underline",
+                  fontWeight: "bold",
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {card.web}
+              </a>
+            </Typography>
+          </Box>
+
+          <Box mt={4} textAlign="center">
+            <Typography variant="h6" component="div">
+              Hey, we're not really far from you! <br /> This is our address:
+            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Typography variant="body1">
+                {card.address.street} {card.address.houseNumber}
+                <br />
+                {card.address.city}, {card.address.state}, {card.address.country}
+              </Typography>
+            </Box>
+            <Box mt={2} textAlign="center">
+              <a
+                href={`https://maps.google.com/?q=${card.address.latitude},${card.address.longitude}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LocationOnIcon
+                  sx={{
+                    fontSize: "32px",
+                    color: "#2196f3",
+                    verticalAlign: "middle",
+                  }}
+                />
+              </a>
+            </Box>
+          </Box>
+        </Box>
+      )}
+
+      <Box mt={4} display="flex" justifyContent="center">
+        <Typography variant="body2" component="div">
+          Details of card: {id}
         </Typography>
       </Box>
-    </CardContent>
+    </Container>
   );
 };
 
-CardBody.propTypes = {
-  card: cardType.isRequired,
-};
-
-export default CardBody;
+export default CardDetailPage;

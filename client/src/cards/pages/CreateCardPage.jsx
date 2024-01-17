@@ -24,10 +24,11 @@ const CreateCardPage = () => {
     const inputFactory = (name, label, required, type) => ({ name, label, required, type })
     const mapInputs = [
         inputFactory("title", "title", true, "text"),
+        inputFactory("subtitle", "subtitle", true, "text"),
         inputFactory("description", "description", true, "text"),
-        inputFactory("price", "price", true, "number"),
         inputFactory("phone", "phone", true, "phone"),
         inputFactory("email", "email", true, "email"),
+        inputFactory("webUrl", "web", false, "text"),
         inputFactory("imageUrl", "image url", false, "text"),
         inputFactory("imageAlt", "image alt", false, "text"),
         inputFactory("state", "state", false, "text"),
@@ -37,7 +38,6 @@ const CreateCardPage = () => {
         inputFactory("houseNumber", "houseNumber", true, "number"),
         inputFactory("zip", "zip", true, "number")
     ]
-
     return (
         <Container
             sx={{
@@ -51,7 +51,7 @@ const CreateCardPage = () => {
                 onChange={rest.validateForm}
                 onReset={rest.handleReset}
                 styles={{ maxWidth: "800px" }}
-                title="Create ads"
+                title="Create Card"
                 to={ROUTES.CARDS}>
                 {
                     mapInputs.map((input, index) => (
@@ -69,6 +69,8 @@ const CreateCardPage = () => {
             </Form>
         </Container>
     )
+
+
 };
 
 export default CreateCardPage;
