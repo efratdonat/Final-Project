@@ -6,13 +6,13 @@ import Box from "@mui/material/Box";
 import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
-  const { title, subtitle, phone, address, bizNumber } = card;
+  const { title, price, phone, address, bizNumber } = card;
   
   const { street, houseNumber, city } = address;
 
   return (
     <CardContent>
-      <CardHeader title={title} subheader={subtitle} sx={{ p: 0, mb: 1 }} />
+      <CardHeader title={title}  sx={{ p: 0, mb: 1 }} />
       <Divider />
       <Box mt={1}>
         <Typography variant="body2" color="text.secondary">
@@ -20,6 +20,12 @@ const CardBody = ({ card }) => {
             Phone:{" "}
           </Typography>
           {phone}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <Typography variant="subtitle1" component="strong">
+            price:{" "}
+          </Typography>
+          {price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           <strong>Address: </strong>
