@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
+
   const { title, phone, price, address, bizNumber } = card;
 
   if (!address){
