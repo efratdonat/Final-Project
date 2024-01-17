@@ -7,6 +7,7 @@ import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
   const { title, subtitle, phone, address, bizNumber } = card;
+  
   const { street, houseNumber, city } = address;
 
   return (
