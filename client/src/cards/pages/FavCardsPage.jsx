@@ -28,8 +28,8 @@ const FavCardsPage = () => {
     return (
         <Container>
             <PageHeader
-                title="Favorite Cards Page"
-                subtitle="Here you can find all your favorite business cards"
+                title="Favorite ads Page"
+                subtitle="Here you can find all your favorite ads"
             />
 
             <CardsFeedback

@@ -5,19 +5,22 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
-import { useTheme } from "../../../../providers/ThemeProvider"
+import { useTheme } from "../../../../providers/ThemeProvider";
 import { useSearchParams } from "react-router-dom";
 
 const SearchBar = () => {
   const { isDark } = useTheme();
   const [searchParams, setSearch] = useSearchParams();
-  const handleChange = ({ target }) => setSearch({ q: target.value })
-  
+  const handleChange = ({ target }) => setSearch({ q: target.value });
+
   return (
     <Box display="inline-flex">
       <FormControl variant="standard">
         <OutlinedInput
-          sx={{ backgroundColor: isDark ? "#ffff" : "#fff" }}
+          sx={{
+            backgroundColor: isDark ? "#ffff" : "#fff",
+            color: isDark ? "#000" : "#000", // שינוי צבע הטקסט לשחור
+          }}
           placeholder="Search"
           size="small"
           value={searchParams.get("q") || ""}
@@ -34,6 +37,5 @@ const SearchBar = () => {
     </Box>
   );
 };
-
 
 export default SearchBar;

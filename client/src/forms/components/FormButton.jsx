@@ -6,7 +6,7 @@ const FormButton = ({
     variant, // string - contained
     component, // string - button
     size, // string - medium
-    color, // string - primary
+    color, // string - green
     onClick, // func
     disabled, // bool - false
     node // node
@@ -42,7 +42,7 @@ FormButton.defaultProps = {
     variant: "contained",
     component: "button",
     size: "medium",
-    color: "primary",
+    color: "green",
     disabled: false
 }
 

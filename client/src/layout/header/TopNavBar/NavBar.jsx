@@ -10,8 +10,7 @@ import { MenuProvider } from "./menu/MenuProvider";
 export const NavBar = () => {
   return (
     <MenuProvider>
-
-      <AppBar position="sticky">
+      <AppBar position="sticky" sx={{ backgroundColor: "green" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <LeftNavBar />
 

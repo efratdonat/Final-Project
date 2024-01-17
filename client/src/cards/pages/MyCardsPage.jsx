@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../users/providers/UserProvider";
 import useCards from "../hooks/useCards";
@@ -6,7 +7,6 @@ import { Container, Fab } from "@mui/material";
 import PageHeader from "../../components/PageHeader";
 import AddIcon from "@mui/icons-material/Add";
 import CardsFeedback from "../components/CardsFeedback";
-import { useEffect } from "react";
 
 const MyCardsPage = () => {
   const { value, handleGetMyCards, handleDeleteCard } = useCards();
@@ -21,25 +21,26 @@ const MyCardsPage = () => {
   }, [user]);
 
   const onDeleteCard = async (cardId) => {
-    await handleDeleteCard(cardId); // this will delete the card from the DB
+    await handleDeleteCard(cardId);
     await handleGetMyCards();
   };
 
   return (
     <Container sx={{ position: "relative", minHeight: "92vh" }}>
-      <PageHeader
-        title="My Cards Page"
-        subtitle="Here you can find your business cards"
-      />
+      <PageHeader title="My ads" subtitle="Here you can find your ads" />
       {cards && (
         <Fab
           onClick={() => navigate(ROUTES.CREATE_CARD)}
-          color="primary"
+          color="green"
           aria-label="add"
           sx={{
             position: "absolute",
-            bottom: 75,
+            bottom: 100,
             right: 16,
+            border: "2px solid green", // מסגרת ירוקה
+            "&:hover": {
+              backgroundColor: "green", // שינוי צבע רקע במעבר העכבר
+            },
           }}
         >
           <AddIcon />

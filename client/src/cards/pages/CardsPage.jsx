@@ -62,8 +62,8 @@ const CardsPage = () => {
   return (
     <Container>
       <PageHeader
-        title="Cards"
-        subtitle="Here you can find business cards from all categories"
+        title="Ads"
+        subtitle="Here you can find Ads from all categories"
       />
 
       <CardsFeedback
