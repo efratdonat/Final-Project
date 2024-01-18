@@ -72,7 +72,7 @@ router.put("/:id", auth, async (req, res) => {
 
     if (userId !== card.user_id) {
       const message =
-        "Authorization Error: Only the user who created the business card can update its details";
+        "Authorization Error: Only the user who created the Ads can update its details";
       return handleError(res, 403, message);
     }
 
