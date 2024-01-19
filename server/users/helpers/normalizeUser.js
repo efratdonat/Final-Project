@@ -6,7 +6,7 @@ const normalizeUser = rawUser => {
     url:
       rawUser.image.url ||
       "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
-    alt: rawUser.image.alt || "Business card image",
+    alt: rawUser.image.alt || "Firstand",
   };
 
   const address = {

@@ -1,7 +1,7 @@
 {
-  "name": "business_cards_app",
+  "name": "Firstand",
   "version": "3.0.0",
-  "description": "Business cards app with MERN",
+  "description": "BFirstand - all 1 hand",
   "main": "server.js",
   "scripts": {
     "start": "export || cross-env NODE_ENV=production&& node .",

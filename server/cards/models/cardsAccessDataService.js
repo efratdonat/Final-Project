@@ -13,7 +13,7 @@ const getCards = async () => {
       return handleBadRequest("Mongoose", error);
     }
   }
-  return Promise.resolve("get cards not in mongodb");
+  return Promise.resolve("get ads not in mongodb");
 };
 
 const getMyCards = async (userId) => {
@@ -26,21 +26,21 @@ const getMyCards = async (userId) => {
       return handleBadRequest("Mongoose", error);
     }
   }
-  return Promise.resolve("get card not in mongodb");
+  return Promise.resolve("get ads not in mongodb");
 };
 
 const getCard = async (cardId) => {
   if (DB === "MONGODB") {
     try {
       let card = await Card.findById(cardId);
-      if (!card) throw new Error("Could not find this card in the database");
+      if (!card) throw new Error("Could not find this ad in the database");
       return Promise.resolve(card);
     } catch (error) {
       error.status = 404;
       return handleBadRequest("Mongoose", error);
     }
   }
-  return Promise.resolve("get card not in mongodb");
+  return Promise.resolve("get ad not in mongodb");
 };
 
 const createCard = async (normalizedCard) => {
@@ -54,7 +54,7 @@ const createCard = async (normalizedCard) => {
       return handleBadRequest("Mongoose", error);
     }
   }
-  return Promise.resolve("createCard card not in mongodb");
+  return Promise.resolve("createCard ad not in mongodb");
 };
 
 const updateCard = async (cardId, normalizedCard) => {
