@@ -21,7 +21,7 @@ const CardsPage = () => {
     <Container>
       <PageHeader
         title="Ads Board"
-        
+        subtitle=""
       />
 
       <Paper elevation={3} sx={{ p: 2, mb: 2 }}>

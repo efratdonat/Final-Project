@@ -1,4 +1,4 @@
-import { arrayOf, bool, func, object, oneOfType, string } from "prop-types"
+import { arrayOf, bool, func,  string } from "prop-types"
 import Spinner from "../../components/sppiner"
 import Cards from "./Cards"
 import cardType from "../models/types/cardType"
