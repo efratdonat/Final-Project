@@ -6,8 +6,8 @@ import Box from "@mui/material/Box";
 import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
+  
   const { title, price, phone, address, bizNumber } = card;
-
   const { street, houseNumber, city } = address;
 
   return (
