@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import CardHeader from '@mui/material/CardHeader';
 import Box from '@mui/material/Box';
+import { useState } from 'react';
+import ImageModal from './imageModel'; 
 
 const CardDetailPage = () => {
   const { id } = useParams();
@@ -15,9 +17,19 @@ const CardDetailPage = () => {
     handleGetCard,
   } = useCards();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     handleGetCard(id);
-  }, []);
+  }, [id]);
 
   return (
     <CardContent>
@@ -59,7 +71,7 @@ const CardDetailPage = () => {
         <Box flex="1">
           {/* Image on the right */}
           {card && card.image && (
-            <Box>
+            <Box onClick={handleOpenModal} style={{ cursor: 'pointer' }}>
               <img
                 src={card.image.url}
                 alt={card.image.alt}
@@ -74,6 +86,14 @@ const CardDetailPage = () => {
           )}
         </Box>
       </Box>
+
+      {/* Image Modal */}
+      <ImageModal
+        open={isModalOpen}
+        handleClose={handleCloseModal}
+        imageUrl={card && card.image.url}
+        imageAlt={card && card.image.alt}
+      />
     </CardContent>
   );
 };
