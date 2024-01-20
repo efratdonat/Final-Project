@@ -21,48 +21,58 @@ const CardDetailPage = () => {
 
   return (
     <CardContent>
-      <CardHeader title={card && card.title} sx={{ p: 0, mb: 2, fontSize: '28px', fontWeight: 'bold' }} />
-      <Divider />
-
-      {/* Display Image with Green Border */}
-      {card && card.image && (
-        <Box mt={2}>
-          <img
-            src={card.image.url}
-            alt={card.image.alt}
-            style={{
-              maxWidth: '100%',
-              border: '2px solid green',
-              borderRadius: '8px',
-              padding: '12px',
-            }}
-          />
+      <Box display="flex">
+        <Box flex="1" pr={2}>
+          {/* Details on the left */}
+          <Typography variant="body2" color="text.secondary">
+            <CardHeader title={card && card.title} sx={{ mb: 2, fontSize: '28px', fontWeight: 'bold' }} />
+            <Divider />
+            <Box>
+              <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
+                Description:
+              </Typography>
+              <Typography variant="body2">{card && card.description}</Typography>
+            </Box>
+            <Box>
+              <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
+                Price:
+              </Typography>
+              <Typography variant="body2">{card && card.price}</Typography>
+            </Box>
+            <Box>
+              <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
+                Phone:
+              </Typography>
+              <Typography variant="body2">{card && card.phone}</Typography>
+            </Box>
+            <Box>
+              <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
+                Address:
+              </Typography>
+              <Typography variant="body2">
+                {card && card.address.street} {card && card.address.houseNumber} {card && card.address.city}
+              </Typography>
+            </Box>
+          </Typography>
         </Box>
-      )}
 
-      <Box mt={2}>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
-            Description:{' '}
-          </Typography>
-          {card && card.description}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
-            Price:{' '}
-          </Typography>
-          {card && card.price}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <Typography variant="subtitle1" component="strong" style={{ fontWeight: 'bold' }}>
-            Phone:{' '}
-          </Typography>
-          {card && card.phone}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
-          <strong>Address: </strong>
-          {card && card.address.street} {card && card.address.houseNumber} {card && card.address.city}
-        </Typography>
+        <Box flex="1">
+          {/* Image on the right */}
+          {card && card.image && (
+            <Box>
+              <img
+                src={card.image.url}
+                alt={card.image.alt}
+                style={{
+                  maxWidth: '100%',
+                  border: '2px solid green',
+                  borderRadius: '8px',
+                  padding: '12px',
+                }}
+              />
+            </Box>
+          )}
+        </Box>
       </Box>
     </CardContent>
   );
