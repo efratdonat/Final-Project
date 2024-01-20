@@ -61,10 +61,11 @@
   "cards": [
     {
       "title": "first card",
+      "subtitle": "this is the first card",
       "description": "this is the first card in the database",
-      "price": "300",
       "phone": "050-0000000",
       "email": "firstCard@gmail.com",
+      "web": "https://www.test.co.il",
       "image": {
         "url": "",
         "alt": ""
@@ -80,10 +81,11 @@
     },
     {
       "title": "second card",
+      "subtitle": "this is the second card",
       "description": "this is the second card in the database",
-      "price": "300",
       "phone": "050-0000000",
       "email": "secondCard@gmail.com",
+      "web": "https://www.test.co.il",
       "image": {
         "url": "",
         "alt": ""
@@ -99,10 +101,11 @@
     },
     {
       "title": "third card",
+      "subtitle": "this is the third card",
       "description": "this is the third card in the database",
-      "price": "300",
       "phone": "050-0000000",
       "email": "thirdCard@gmail.com",
+      "web": "https://www.test.co.il",
       "image": {
         "url": "",
         "alt": ""

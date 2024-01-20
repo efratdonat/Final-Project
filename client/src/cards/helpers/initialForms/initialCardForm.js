@@ -1,10 +1,9 @@
 const initialCardForm = {
     title: "",
     description: "",
-    subtitle: "",
+    price: "",
     phone: "",
     email: "",
-    webUrl: "",
     imageUrl: "",
     imageAlt: "",
     state: "",

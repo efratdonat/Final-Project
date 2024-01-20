@@ -74,7 +74,7 @@ const useCards = () => {
                 const normalizedCard = normalizeCard(cardFromClient);
                 const card = await createCard(normalizedCard);
                 requestStatus(false, null, null, card);
-                snack("A new business card has been created", "success")
+                snack("A new ad has been created", "success")
                 navigate(ROUTES.MY_CARDS);
             } catch (error) {
                 requestStatus(false, error, null);

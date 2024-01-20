@@ -17,19 +17,15 @@ const cardSchema = {
     houseNumber: Joi.number().required(),
     phone: Joi.string()
         .ruleset.regex(/0[0-9]{1,2}-?\s?[0-9]{3}\s?[0-9]{4}/)
-        .rule({ message: 'card "phone" mast be a valid phone number' })
+        .rule({ message: 'ad "phone" mast be a valid phone number' })
         .required(),
     email: Joi.string()
         .ruleset.pattern(/^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/)
-        .rule({ message: 'card "mail" mast be a valid mail' })
+        .rule({ message: 'ad "mail" mast be a valid mail' })
         .required(),
-    webUrl: Joi.string()
-        .ruleset.regex(urlRegex)
-        .rule({ message: 'card "web" mast be a valid url' })
-        .allow(""),
     imageUrl: Joi.string()
         .ruleset.regex(urlRegex)
-        .rule({ message: 'card.image "url" mast be a valid url' })
+        .rule({ message: 'ad.image "url" mast be a valid url' })
         .allow(""),
 
 }

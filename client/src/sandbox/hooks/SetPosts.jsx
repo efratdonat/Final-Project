@@ -29,7 +29,12 @@ const SetPosts = () => {
           onChange={(e) => setPost({ ...post, title: e.target.value })}
           value={post.title}
         />
-    
+        <input
+          type="text"
+          placeholder="Enter subtitle"
+          onChange={(e) => setPost({ ...post, subtitle: e.target.value })}
+          value={post.subtitle}
+        />
         <input
           type="text"
           placeholder="Enter auther"
