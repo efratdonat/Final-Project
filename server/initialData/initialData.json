@@ -63,6 +63,7 @@
       "title": "first card",
       "description": "this is the first card in the database",
       "phone": "050-0000000",
+      "price": "300",
       "email": "firstCard@gmail.com",
       "image": {
         "url": "",
@@ -81,6 +82,7 @@
       "title": "second card",
       "description": "this is the second card in the database",
       "phone": "050-0000000",
+      "price": "300",
       "email": "secondCard@gmail.com",
       "image": {
         "url": "",
@@ -99,6 +101,7 @@
       "title": "third card",
       "description": "this is the third card in the database",
       "phone": "050-0000000",
+      "price": "300",
       "email": "thirdCard@gmail.com",
       "image": {
         "url": "",
