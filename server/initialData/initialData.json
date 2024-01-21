@@ -59,62 +59,64 @@
     }
   ],
   "cards": [
-    {
-      "title": "first card",
-      "description": "this is the first card in the database",
-      "phone": "050-0000000",
-      "price": "300",
-      "email": "firstCard@gmail.com",
-      "image": {
-        "url": "",
-        "alt": ""
-      },
-      "address": {
-        "state": "",
-        "country": "test",
-        "city": "test",
-        "street": "test",
-        "houseNumber": 3,
-        "zip": "0"
+      {
+        "title": "lounge chair",
+        "description": "A new armchair, bought at IKEA about two weeks ago, does not match our measurements. Very comfortable and strong.",
+        "phone": "050-0000000",
+        "price": 600,
+        "email": "loungechair@gmail.com",
+        "image": {
+          "url": "https://www.urbanica-wh.com/pub/media/catalog/product/cache/d7de652257d415baafd26a3fb4126c33/h/m/HME016087-6658-1704119032224456.jpg",
+          "alt": "lounge chair"
+        },
+        "address": {
+          "state": "22",
+          "country": "Israel",
+          "city": "TelAviv",
+          "street": "Arlozorov",
+          "houseNumber": "3",
+          "zip": "1"
       }
     },
     {
-      "title": "second card",
-      "description": "this is the second card in the database",
-      "phone": "050-0000000",
-      "price": "300",
-      "email": "secondCard@gmail.com",
-      "image": {
-        "url": "",
-        "alt": ""
+        "title": "Chest of drawers",
+        "description": "Chest of drawers - completely new, we received a gift but we don't need it, bought at ICE about a month ago.",
+        "phone": "050-0000000",
+        "price": 250,
+        "email": "drawers@gmail.com",
+        "image": {
+          "url": "https://www.urbanica-wh.com/pub/media/catalog/product/cache/d7de652257d415baafd26a3fb4126c33/h/m/HME012093-010-1667901520210796.jpg",
+          "alt": "Chest of drawers"
+        },
+        "address": {
+          "state": "10",
+          "country": "Israel",
+          "city": "Yerushalaim",
+          "street": "Hatzvi",
+          "houseNumber": "10",
+          "zip": "20"
+        }
       },
-      "address": {
-        "state": "",
-        "country": "test",
-        "city": "test",
-        "street": "test",
-        "houseNumber": 3,
-        "zip": "0"
-      }
-    },
     {
-      "title": "third card",
-      "description": "this is the third card in the database",
-      "phone": "050-0000000",
-      "price": "300",
-      "email": "thirdCard@gmail.com",
-      "image": {
-        "url": "",
-        "alt": ""
-      },
-      "address": {
-        "state": "",
-        "country": "test",
-        "city": "test",
-        "street": "test",
-        "houseNumber": 3,
-        "zip": "0"
+        "title": "salt lamp\n",
+        "description": "The salt lamp that helps to release the respiratory tract, shines with a gentle light and gives off a good smell, new in its original packaging",
+        "phone": "050-0000000",
+        "price": 1500,
+        "email": "salflamp@gmail.com",
+        "image": {
+          "url": "https://www.urbanica-wh.com/pub/media/catalog/product/cache/d7de652257d415baafd26a3fb4126c33/h/m/HME014119-1722-1690975483186631.jpg",
+          "alt": "dining room"
+        },
+        "address": {
+          "state": "1",
+          "country": "Israel",
+          "city": "Bnei Braq",
+          "street": "Rashi",
+          "houseNumber": "5",
+          "zip": "3"
+        }
+     
       }
-    }
+  
   ]
 }
