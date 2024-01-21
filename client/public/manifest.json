@@ -1,19 +1,19 @@
 {
-  "short_name": "Business cards app",
-  "name": "Business cards aplication for business and clients",
+  "short_name": "Firstand",
+  "name": "Firstand-   aplication for 1 hand",
   "icons": [
     {
-      "src": "./assets/images/business-card.png",
+      "src": "./assets/images/ale.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./assets/images/business-card.png",
+      "src": "./assets/images/ale.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./assets/images/business-card.png",
+      "src": "./assets/images/ale.png",
       "type": "image/png",
       "sizes": "512x512"
     }
