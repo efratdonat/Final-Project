@@ -11,7 +11,7 @@ const CardDeleteDialog = ({ isDialogOpen, onDelete, onChangeDialog }) => {
             maxWidth="xs"
         >
             <DialogTitle id="alert-dialog-title">
-                {"Are you sure you want to delete this card?"}
+                {"Are you sure you want to delete this ad?"}
             </DialogTitle>
             <DialogContentText id="alert-dialog-description">
                 This operation will completely delete the business card and all its
@@ -20,7 +20,7 @@ const CardDeleteDialog = ({ isDialogOpen, onDelete, onChangeDialog }) => {
             </DialogContentText>
             <DialogActions>
                 <Button onClick={onChangeDialog} autoFocus color="info">Cancel</Button>
-                <Button onClick={onDelete} color="error">Delete card</Button>
+                <Button onClick={onDelete} color="error">Delete ad</Button>
             </DialogActions>
         </Dialog>
     );
