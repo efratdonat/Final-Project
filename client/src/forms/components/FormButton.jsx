@@ -1,51 +1,44 @@
-import { Button } from "@mui/material"
-import { bool, func, node, string } from "prop-types"
-import { memo } from "react"
+import React from "react";
+import Button from "@mui/material/Button";
+import { bool, func, node, string } from "prop-types";
+import { memo } from "react";
 
 const FormButton = ({
-    variant, // string - contained
-    component, // string - button
-    size, // string - medium
-    color, // string - green
-    onClick, // func
-    disabled, // bool - false
-    node // node
+  variant, // string - contained
+  size, // string - medium
+  color, // string - green
+  onClick, // func
+  disabled, // bool - false
+  node: children // node
 }) => {
-
-    return (
-        <Button
-            variant={variant}
-            component={component}
-            size={size}
-            color={color}
-            onClick={onClick}
-            disabled={disabled}
-            fullWidth
-        >
-            {node}
-        </Button>
-
-    )
-}
+  return (
+    <Button
+      variant={variant}
+      size={size}
+      color={color}
+      onClick={onClick}
+      disabled={disabled}
+      fullWidth
+    >
+      {children}
+    </Button>
+  );
+};
 
 FormButton.propTypes = {
-    variant: string.isRequired,
-    component: string.isRequired,
-    size: string.isRequired,
-    color: string.isRequired,
-    onClick: func.isRequired,
-    disabled: bool.isRequired,
-    node: node.isRequired
-}
+  variant: string.isRequired,
+  size: string.isRequired,
+  color: string.isRequired,
+  onClick: func.isRequired,
+  disabled: bool.isRequired,
+  node: node.isRequired,
+};
 
 FormButton.defaultProps = {
-    variant: "contained",
-    component: "button",
-    size: "medium",
-    color: "green",
-    disabled: false
-}
+  variant: "contained",
+  size: "medium",
+  color: "green",
+  disabled: false,
+};
 
-
-
-export default memo(FormButton)
+export default memo(FormButton);
