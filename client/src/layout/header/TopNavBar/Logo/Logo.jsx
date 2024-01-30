@@ -9,7 +9,7 @@ const Logo = () => {
       <img
         src="https://publicdomainvectors.org/tn_img/hitchhand.webp"
         alt="Hitchhiking hand"
-        style={{ width: "40px", marginRight: "10px" }} // גדלתי את הרוחב ל-40px
+        style={{ width: "40px", marginRight: "10px" }} 
       />
       <Typography
         variant="h3"

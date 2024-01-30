@@ -5,7 +5,7 @@ const normalizeCard = async (rawCard, userId) => {
   const image = {
     url:
       url ||
-      "https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_960_720.jpg",
+      "https://media.istockphoto.com/id/1438931606/photo/womans-hand-with-a-tree-she-is-planting-environmental-conservation-concept-protect-and.webp?b=1&s=612x612&w=0&k=20&c=qkiZnwOcwDunV8cnvxFZTEthGGTi8PnNcacRJ94Bifo=",
           alt: alt || "Firstand",
   };
 

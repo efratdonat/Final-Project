@@ -6,7 +6,7 @@ const Cards = ({cards, onDelete, onLike}) => {
 
   if (!cards.length) {
     return (
-      <Typography>bad! it seams that there are no Ads to show</Typography>
+      <Typography>Ooops.. it seams that there are no cards to show</Typography>
     );
   }
 

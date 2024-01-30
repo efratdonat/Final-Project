@@ -8,12 +8,19 @@ import CardActionBar from "./CardActionBar";
 import CardBody from "./CardBody";
 import CardHead from "./CardHead";
 
+
 const Card = ({ card, onDelete, onLike }) => {
+
   const navigate = useNavigate(); 
 
+
   return (
-    <MuiCard sx={{ minWidth: 200, maxWidth: 250, minHeight: 300, maxHeight: 350 }}>
-      <CardActionArea sx={{ p: 2 }} onClick={() => navigate(`${ROUTES.CARD_INFO}/${card._id}`)}>
+
+    <MuiCard sx={{ minWidth: 280, maxWidth: 350 }}>
+      <CardActionArea sx={{ p: 2 }}
+        onClick={() => 
+          navigate(`${ROUTES.CARD_INFO}/${card._id}`)}
+      >
         <CardHead image={card.image} />
         <CardBody card={card}></CardBody>
       </CardActionArea>

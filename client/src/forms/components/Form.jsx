@@ -39,7 +39,6 @@ const Form = ({
         <Grid item xs={12} sm={6}>
           <FormButton
             node="cancel"
-            color="error"
             component="div"
             variant="outlined"
             onClick={() => navigate(to)}

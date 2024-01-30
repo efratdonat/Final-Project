@@ -3,6 +3,10 @@ import Button from "@mui/material/Button";
 import { bool, func, node, string } from "prop-types";
 import { memo } from "react";
 
+const styledColor = {
+  color:"red"
+}
+
 const FormButton = ({
   variant, // string - contained
   size, // string - medium
@@ -12,10 +16,10 @@ const FormButton = ({
   node: children // node
 }) => {
   return (
-    <Button
+    <Button style={styledColor}
       variant={variant}
       size={size}
-      color={color}
+    
       onClick={onClick}
       disabled={disabled}
       fullWidth
